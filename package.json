@@ -19,10 +19,12 @@
   },
   "homepage": "https://github.com/Sup-Film/backend-mastery-nodejs-jwt-mongodb-tutorial#readme",
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/compression": "^1.8.1",
     "@types/cookie-parser": "^1.4.9",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
+    "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^24.5.2",
     "nodemon": "^3.1.10",
     "prettier": "^3.6.2",
@@ -31,12 +33,16 @@
     "typescript": "^5.9.2"
   },
   "dependencies": {
+    "bcryptjs": "^3.0.2",
     "compression": "^1.8.1",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "dotenv": "^17.2.2",
     "express": "^5.1.0",
     "express-rate-limit": "^8.1.0",
-    "helmet": "^8.1.0"
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.18.3",
+    "winston": "^3.18.1"
   }
 }
