@@ -38,3 +38,21 @@ export const generateRefreshToken = (userId: Types.ObjectId): string => {
     subject: 'refreshApi',
   });
 };
+
+export const verifyAccessToken = (token: string) => {
+  const secret = config.JWT_ACCESS_SECRET;
+  if (!secret) {
+    throw new Error('JWT access secret is not defined in configuration.');
+  }
+
+  return jwt.verify(token, secret);
+};
+
+export const verifyRefreshToken = (token: string) => {
+  const secret = config.JWT_REFRESH_SECRET;
+  if (!secret) {
+    throw new Error('JWT refresh secret is not defined in configuration.');
+  }
+
+  return jwt.verify(token, secret);
+};

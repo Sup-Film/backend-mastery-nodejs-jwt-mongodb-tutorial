@@ -27,7 +27,7 @@ type UserData = Pick<IUser, 'email' | 'password' | 'role'>;
 // การกำหนดเป็น Promise<void> หมายความว่ารองานเสร็จเหมือนเดิม แต่ไม่คาดหวังข้อมูลใดถูกส่งกลับเมื่อสำเร็จ
 const register = async (req: Request, res: Response): Promise<void> => {
   const { email, password, role } = req.body as UserData;
-
+  console.log(req.body);
   if (role === 'admin' && !config.WHITELIST_ADMINS_MAIL.includes(email)) {
     res.status(403).json({
       code: 'AuthorizationError',
